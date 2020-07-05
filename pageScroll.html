@@ -31,6 +31,23 @@
         left: 0;
         background-color: #eeeeee;
     }
+    .file_btn {
+        width: 90px;
+        display: inline-block;
+        padding: .3em .5em;
+        background-image: linear-gradient(#ddd, #bbb);
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3em;
+        box-shadow: 0 1px white inset;
+        text-align: center;
+        text-shadow: 0 1px 1px black;
+        color:white;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        margin-top: 15px;
+        margin-left: 6px;
+    }     
     #choose {
         width: 300px;
         height: 30px;
@@ -62,7 +79,7 @@
         width: 1000px;
         height: 80vh;
         left: 50%;
-        border: 1px solid #555555;
+        border: 1px solid #5555553d;
         box-sizing: border-box;
         margin-left: -500px;
         margin-top: 70px;
@@ -79,7 +96,7 @@
         height: 10vh;
         box-sizing: border-box;
         padding-top: 10px;
-        background-color: #aaaaaa;
+        background-color: #eeeeee;
         text-align: center;
         line-height: 10vh;
         overflow: hidden;
@@ -87,6 +104,10 @@
 </style>
 <body>
     <header>
+        <div>
+            <input type="file" id="files" accept=".txt" style="display:none" onchange="leadIn();"/>
+            <input type="button" id="import" value="导入文件" class="file_btn"/>
+        </div>
         <select name="" id="choose">
         </select>
     </header>
@@ -95,54 +116,93 @@
         </div>
     </section>
     <footer>
-        <div>
-                把xx设为主页关于xx<span style="color: blue">About  Xxxx</span>xxxx(京)-经营性-2017-0020
-            ©2020 Baidu 使用xx前必读 意见反馈 京ICP证01230173号  京公网安备<span style="color: blue">1101000021000001</span>号
+        <div></div>
+            <span>Copyright © 2020</span>&nbsp;&nbsp;
+            <a href="https://github.com/guohao0603" >https://github.com/guohao0603</a>
         </div>
     </footer>
 </body>
-<!--<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>-->
-<script>
-    let msg0 ='<h1 style="color:red">我是文章开头夜晚，帐篷中原本很静，突兀的声响划破安宁，楚风的手僵在那里，停止了所有动作</h1> ' 
-        +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。' +'这是一个最好的时代，也是一个最坏的时代。在这个时代里，有人成功，有人失败。在这个时代里，每个人都有自己的故事众多的创业者中，有一类科技创业群体，他们充满激情，梦想用技术改变世界，是资本市场的宠儿。媒体上闪耀着成功者的身影，但更多创业者还在为梦想坚持'
-        +'就像非典成就了阿里巴巴，现在的新冠让科技创业者们陷入一种焦虑，但又在努力寻找突破方向。'
-    
-    let msg1 = '<h2 style="color: blue">嫦娥四号中继星成功发射 将搭建地月“鹊桥”</h2> ' +
-        '新华社西昌5月21日电（记者白国龙、余晓洁）21日5时28分，我国在西昌卫星发射中心用长征四号丙运载火箭，成功将探月工程嫦娥四号任务“鹊桥”号中继星发射升空。' +
-        '这是世界首颗运行于地月拉格朗日L2点（简称地月L2点）的通信卫星，将为2018年底择机实施的嫦娥四号月球背面软着陆探测任务提供地月间的中继通信。<br/>' +
-        '长征四号丙运载火箭飞行25分钟后，星箭分离，将“鹊桥”直接送入近地点高度200公里，' +
-        '远地点高度40万公里的预定地月转移轨道，卫星太阳翼和中继通信天线相继展开正常。' +
-        '后续，“鹊桥”将经中途修正、近月制动和月球借力，进入月球至地月L2点的转移轨道，' +
-        '通过3次捕获控制和修正后，最终进入环绕地月L2点的使命轨道，地月L2点是卫星相对于地球和月球基本保持静止的一个空间点。<br/><br/> '+
-        '<h2 style="color: rebeccapurple">嫦娥四号中继星成功发射 将搭建地月“鹊桥”</h2> ';
 
-    let msg = msg0 + msg1 ;
-    // 滚动函数
-    function scrollme(time) {
-        cur_top--;
-        console.log('12222222',msg_height)
-        console.log('22333333',cur_top)
-        let vbety = msg_height/time
-        //如果整个消息都已经上移完了，则重新赋值消息，及移动距离
-        if (0 == vbety*cur_top + msg_height) {
-            console.log('已经移完了,开始下一次')
+<script>
+  
+    let div_msg = document.getElementById('div_msg') // 文章的div
+    let div_con = document.getElementById('div_con') // 容器div
+ 
+   
+    let msg_height = null // 获取文章的高度
+    //加2次，这样完全移动完的时候不至于出现空白
+    // div_msg.innerHTML = msg + msg
+
+  
+    let con_height = div_con.offsetHeight // 获取容器的高度
+
+
+    let iCount = null; // 初始化时-定时器
+    //当前顶部坐标
+    let cur_top = 0;
+    let iCount2 = null // 下拉选择速率时 定义的定时器
+    let isTrue=true;  // flag
+    let customSpeed = 2 // 自定义的时间
+  
+    let file_btn = document.getElementsByClassName('file_btn')
+    let files = document.getElementById('files')
+
+    let optionArray = [         // select 默认的值
+        {key:'速度:x1',value:'none'},
+        {key:'速度:x2',value:'slow'},
+        {key:'速度:x3',value:'middle'},
+        {key:'速度:x4',value:'fast'}
+    ]
+    let selctDom =  document.getElementById('choose'); // 获取select dom
+
+    file_btn[0].onclick = function(e){
+        // e = e || window.event;  
+        // if(e.stopPropagation) { //W3C阻止冒泡方法  
+        //     e.stopPropagation();  
+        // } else {  
+        //     e.cancelBubble = true; //IE阻止冒泡方法  
+        // }  
+        files.click()
+    }
+    // 导入文件函数
+    function leadIn (){
+        var selectedFile = document.getElementById("files").files[0];//获取读取的File对象
+        var name = selectedFile.name;//读取选中文件的文件名
+        var size = selectedFile.size;//读取选中文件的大小
+        console.log(selectedFile)
+        if (selectedFile.type !== 'text/plain') {
+            alert('文件格式非法')
+        }else {
+            console.log("文件名:"+name+"大小："+size);    var reader = new FileReader();//这里是核心！！！读取操作就是由它完成的。
+            reader.readAsText(selectedFile,'gb2312');//读取文件的内容
+            reader.onload = function(e){
+                console.log('eeeeee',e)
+                let data = e.target.result;//当读取完成之后会回调这个函数，然后此时文件的内容存储到了result中。直接操作即可。
+                div_msg.innerHTML = data // 数据加载到页面上
+                msg_height = div_msg.offsetHeight // 获取此时div 的高度
+                document.getElementById("files").value = null // 把input value 置为空 第二次课上传相同文件
+                clearInterval(iCount) // 清楚定时器
+                clearInterval(iCount2) // 清楚定时器
+                customSpeed = 2 // 默认速度 2px
+                isTrue = true // 默认暂停
+                addOption() // 重置selcet
+                iCount = setInterval(function () {  // iCount 初始化定时器
+                    scrollme(customSpeed) // 默认每次移动 2px 
+                }, 50);
+                
+            };
+        }
+    }
+
+    // 内容移动函数
+    function scrollme(speed) {
+        cur_top--; 
+        //如果整个页面都已经上移完了，则页面距离容器顶部距离为0
+        if (Math.abs(speed*cur_top) >= msg_height) {
+            console.log('已经移动完了,开始下一次')
             cur_top = 0;
         }
-        div_msg.style.top = vbety*cur_top + 'px'
+        div_msg.style.top = speed*cur_top + 'px'
     }
     // 初始化 select
     function addOption(){
@@ -155,45 +215,8 @@
             obj.options[i]=new Option(optionArray[i].key,optionArray[i].value);    //方法三：
         }
     }
-
-    let optionArray = [         // select 默认的值
-        {key:'最慢',value:'none'},
-        {key:'慢速',value:'slow'},
-        {key:'中速',value:'middle'},
-        {key:'快速',value:'fast'}
-    ]
-
-
-    let selctDom =  document.getElementById('choose');
-    //2.添加选项option
+    //添加选项option
     addOption()
-
-    //先赋值div
-    // $('#div_msg').html(msg);
-    let div_msg = document.getElementById('div_msg')
-    let div_con = document.getElementById('div_con')
-    div_msg.innerHTML = msg
-
-    //获取div的高度
-    // let msg_height = $('#div_msg').height();
-    let msg_height = div_msg.offsetHeight
-    //加2次，这样完全移动完的时候不至于出现空白
-    div_msg.innerHTML = msg + msg
-
-    // let con_height = $('#div_con').height();
-    let con_height = div_con.offsetHeight
-    let sub_height = con_height - msg_height;
-    console.log('msg_height=' + msg_height + ', con_height=' + con_height + ",sub_height=" + sub_height);
-
-    //当前顶部坐标
-    let cur_top = 0;
-
-    let iCount = setInterval(function () {  // iCount 初始化定时器
-        scrollme(500)
-    }, 50);
-    let iCount2 = null // 下拉选择速率时 定义的定时器
-    let isTrue=true;  // flag
-    let customTime = 500 // 自定义的时间
 
     // 页面点击暂停滚动
     div_con.onclick = function () {
@@ -202,8 +225,9 @@
             clearInterval(iCount2)
             isTrue = false
         }else {
+            console.log('22222',customSpeed)
             iCount = setInterval(function () {
-                scrollme(customTime)
+                scrollme(customSpeed)
             },50)
             isTrue = true
         }
@@ -214,34 +238,15 @@
         let value = selctDom.value
         clearInterval(iCount)
         clearInterval(iCount2)
-        // 自定义时间 由此动态计算出速率 乘以 定时器的内容频率 === 内容的高度
-        // (高度是固定不变的，其他是变量，速率是计算出来的，不可定义 *1 *2 *3)
-        let time = value === 'none' ? 500 :
-            value === 'slow' ? 400 :
-            value === 'middle' ? 300 :
-            value === 'fast' ? 200 : 100
-
-        customTime = time
-
+        let speed = value === 'none' ? 2 :
+            value === 'slow' ? 4 :
+            value === 'middle' ? 6 :
+            value === 'fast' ? 8 : 2
+        customSpeed = speed // 保存 当前选择的速度
         iCount2 = setInterval(function () {
-            scrollme(time)
+            scrollme(speed)
         }, 50);
 
     }
-
-
-    // $("#div_con").click(function(){
-    //     if(isTrue){
-    //         clearInterval(iCount);
-    //         isTrue=false;
-    //     }else{
-    //         iCount = setInterval("scrollme()", 20);
-    //         isTrue=true;
-    //     }
-    // });
-
-
-
-   
 </script>    
 </html>
