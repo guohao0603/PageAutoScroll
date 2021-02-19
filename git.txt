@@ -1,3 +1,6 @@
+git config --global user.email "1172409362@qq.com"
+git config --global user.name "guohao0603"
+
 git init 初始化仓库
 git add 文件名 添加到缓存区
 git commit -m "描述" 版本记录
@@ -6,3 +9,4 @@ git push
 git branch 检查分支
 git checkout -b feature 创建分支
 git checkout master 切换分支
+ 
