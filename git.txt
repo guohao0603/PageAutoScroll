@@ -6,7 +6,9 @@ git add 文件名 添加到缓存区
 git commit -m "描述" 版本记录
 git push 
 
-git branch 检查分支
+git branch 查看所有分支
 git checkout -b feature 创建分支
 git checkout master 切换分支
+git merge feature(合并的分支名)  在主分支区合并其他分支 
+git branch -d feature 删除feature分支
  
