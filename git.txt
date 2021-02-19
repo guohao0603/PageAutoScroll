@@ -11,4 +11,10 @@ git checkout -b feature 创建分支
 git checkout master 切换分支
 git merge feature(合并的分支名)  在主分支区合并其他分支 
 git branch -d feature 删除feature分支
+
+git branch -a 查看远程本地分支
+git push origin dev 推送本地分支到远程
+git checkout -b dev origin/dev   拉取远程分支并在本地分支创建
+
+ 
  
