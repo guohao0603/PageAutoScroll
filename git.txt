@@ -1,0 +1,8 @@
+git init 初始化仓库
+git add 文件名 添加到缓存区
+git commit -m "描述" 版本记录
+git push 
+
+git branch 检查分支
+git checkout -b feature 创建分支
+git checkout master 切换分支
